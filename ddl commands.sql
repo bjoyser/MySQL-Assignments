@@ -1,0 +1,33 @@
+
+DROP DATABASE IF EXISTS School;
+
+CREATE DATABASE School;
+
+USE School;
+
+CREATE TABLE STUDENT (
+    Roll_No INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Marks INT,
+    Grade CHAR(1)
+);
+
+INSERT INTO STUDENT (Roll_No, Name, Marks, Grade) VALUES
+(1, 'sasi', 95, 'A'),
+(2, 'Bobby', 68, 'B'),
+(3, 'harlie', 92, 'A'),
+(4, 'chako', 67, 'C'),
+(5, 'sharil', 74, 'B');
+
+-- (1) Display the table
+SELECT * FROM STUDENT;
+ALTER TABLE STUDENT
+ADD Contact VARCHAR(15);
+ALTER TABLE STUDENT
+DROP COLUMN Grade;
+ALTER TABLE STUDENT
+RENAME TO CLASSTEN;
+TRUNCATE TABLE CLASSTEN;
+DROP TABLE CLASSTEN;
+
+
